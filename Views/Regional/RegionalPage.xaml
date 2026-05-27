@@ -22,12 +22,12 @@
             <Label Text="{Binding MensajeValidacion}" TextColor="Red" HorizontalOptions="Center" FontAttributes="Bold" />
 
             <!-- SECCIÓN MÉTRICAS (En construcción) -->
-            <Frame BorderColor="LightGray" CornerRadius="8" Padding="15" HasShadow="True">
+            <Border BorderColor="LightGray" CornerRadius="8" Padding="15" HasShadow="True">
                 <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
                     <Label Text="Métricas de Gerencias" FontAttributes="Bold" FontSize="16" TextColor="#9C27B0" HorizontalOptions="Center" />
                     <Label Text="Vista en construcción..." FontAttributes="Italic" TextColor="Gray" HorizontalOptions="Center" />
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
         </VerticalStackLayout>
     </ScrollView>

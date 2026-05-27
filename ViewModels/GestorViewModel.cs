@@ -82,7 +82,7 @@ public partial class GestorViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private async Task GuardarCompromisoAsync()
+    private async Task GuardarAvanceAsync()
     {
         IsBusy = true;
         MensajeValidacion = string.Empty;
@@ -91,12 +91,12 @@ public partial class GestorViewModel : ObservableObject
         {
             // Guarda todo el documento por primera vez (sobreescribe si existe)
             bool exito = await _firestoreService.GuardarAvanceAsync(AvanceActual.Id, AvanceActual);
-            MensajeValidacion = exito ? "Compromiso guardado exitosamente." : "No se pudo guardar el compromiso.";
+            MensajeValidacion = exito ? "Avance guardado exitosamente." : "No se pudo guardar el avance.";
         }
         catch (Exception ex)
         {
-            MensajeValidacion = "Ocurrió un error al guardar el compromiso.";
-            _logger.LogError(ex, "Error en GuardarCompromisoAsync");
+            MensajeValidacion = "Ocurrió un error al guardar el avance.";
+            _logger.LogError(ex, "Error en GuardarAvanceAsync");
         }
         finally
         {

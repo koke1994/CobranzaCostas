@@ -10,10 +10,6 @@ public class FirebaseAuthService
     /// <summary>
     /// Autentica al usuario con correo y contraseña.
     /// </summary>
-    /// <returns>
-    /// El UID del usuario si el login es exitoso.
-    /// Null si las credenciales son incorrectas o hay un error de red.
-    /// </returns>
     public async Task<string?> LoginAsync(string email, string password)
     {
         try
@@ -21,7 +17,8 @@ public class FirebaseAuthService
             var result = await CrossFirebaseAuth.Current
                 .SignInWithEmailAndPasswordAsync(email, password);
 
-            return result.User?.Uid;
+            // En la versión actual, result.User nos da directamente el objeto IFirebaseUser
+            return result?.Uid;
         }
         catch (Exception ex)
         {

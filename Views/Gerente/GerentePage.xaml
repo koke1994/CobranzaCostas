@@ -21,7 +21,7 @@
             <Label Text="{Binding MensajeValidacion}" TextColor="Red" HorizontalOptions="Center" FontAttributes="Bold" />
 
             <!-- SECCIÓN COMPROMISO GERENCIAL -->
-            <Frame BorderColor="LightGray" CornerRadius="8" Padding="15" HasShadow="True">
+            <Border BorderColor="LightGray" CornerRadius="8" Padding="15" HasShadow="True">
                 <VerticalStackLayout Spacing="10">
                     <Label Text="Métricas de Supervisión" FontAttributes="Bold" FontSize="16" TextColor="#FF9800" />
                     
@@ -38,7 +38,7 @@
 
                     <Button Text="Guardar Compromiso" Command="{Binding GuardarCompromisoCommand}" Margin="0,20,0,0" BackgroundColor="#FF9800" TextColor="White" />
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
         </VerticalStackLayout>
     </ScrollView>
